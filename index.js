@@ -151,9 +151,7 @@ class TransactionAnalyzer {
 }
 
 // Load transactions from JSON file
-const transactionsData = fs.readFileSync('transactions.json');
-const transactions = JSON.parse(transactionsData);
+const transactionsData = require("./transactions.json");
 
-const analyzer = new TransactionAnalyzer(transactions);
+const analyzer = new TransactionAnalyzer(transactionsData);
 
-module.exports = analyzer;
